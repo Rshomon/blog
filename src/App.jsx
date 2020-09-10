@@ -1,43 +1,31 @@
 import React from "react";
 // import Admin from "./components/Admin/admin"
 import "./App.css";
-import { routes } from "./route/router"
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom"
 import "./assets/style/basestyle.css"
-import Admin from "./components/Admin/admin"
+import { Layout } from 'antd';
+import Headers from "./components/Headers/Headers"
+
+const { Header, Content, Footer } = Layout;
 
 class App extends React.Component {
   render() {
     return (
-      // <Router>
-      //   <Switch>
-      //     {
-      //       routes.map((item) => {
-      //         return <Route key={item.path} path={item.path} component={item.component}></Route>
-      //       })
-      //     }
-      //     <Redirect from='/' to='/home' exact></Redirect>
-      //     <Redirect to='/404' exact></Redirect>
-      //   </Switch>
-      // </Router>
+      <Layout>
+        <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+          <Headers></Headers>
+        </Header>
+        <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+          {/* <Breadcrumb style={{ margin: '16px 0' }}>
+                        <Breadcrumb.Item>Home</Breadcrumb.Item>
+                        <Breadcrumb.Item>List</Breadcrumb.Item>
+                        <Breadcrumb.Item>App</Breadcrumb.Item>
+                    </Breadcrumb> */}
+          <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
 
-      <div>
-        <Admin>
-          <Router>
-            <Switch>
-              {
-                routes.map((item) => {
-                  return <Route key={item.path} path={item.path} component={item.component}></Route>
-                })
-              }
-              {/* <Redirect from='/' to='/home'></Redirect> */}
-              你好
-            </Switch>
-          </Router>
-
-          {/* haahahhahahahah */}
-        </Admin>
-      </div>
+          </div>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+      </Layout>
     )
   }
 }

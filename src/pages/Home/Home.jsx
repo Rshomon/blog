@@ -1,4 +1,8 @@
+import { Layout } from 'antd';
 import React from "react"
+import Headers from "../../components/Headers/Headers"
+
+const { Header, Content, Footer } = Layout;
 
 class Home extends React.Component {
     render() {
@@ -9,5 +13,4 @@ class Home extends React.Component {
         )
     }
 }
-
 export default Home
