@@ -1,6 +1,6 @@
 @import "../../assets/style/basestyle.css";
 .header {
-  width: 60rem;
+  width: 960px;
 }
 
 #components-layout-demo-fixed .logo {
@@ -9,4 +9,8 @@
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   float: left;
+}
+.Navtitle {
+  float: left;
+  font-size: 30px;
 }
