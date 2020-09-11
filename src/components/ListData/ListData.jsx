@@ -7,6 +7,9 @@ for (let i = 0; i < 23; i++) {
     listData.push({
         href: 'https://ant.design',
         title: `ant design part ${i}`,
+        collect:30,
+        star:11,
+        com:11111,
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
         content:
@@ -31,16 +34,16 @@ export default class Listdata extends React.Component {
                     onChange: page => {
                         console.log(page);
                     },
-                    pageSize: 3,
+                    pageSize: 6,
                 }}
                 dataSource={listData}
                 renderItem={item => (
                     <List.Item
                         key={item.title}
                         actions={[
-                            <IconText icon={StarOutlined} text="156" key="list-vertical-star-o" />,
-                            <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-                            <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
+                            <IconText icon={StarOutlined} text={item.star} key="list-vertical-star-o" />,
+                            <IconText icon={LikeOutlined} text={item.collect} key="list-vertical-like-o" />,
+                            <IconText icon={MessageOutlined} text={item.com} key="list-vertical-message" />,
                         ]}
                         extra={
                             <img
