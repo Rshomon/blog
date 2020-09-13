@@ -1,4 +1,4 @@
-import { List, Avatar, Space } from 'antd';
+import { List, Space } from 'antd';
 import React from "react"
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 
@@ -7,9 +7,9 @@ for (let i = 0; i < 23; i++) {
     listData.push({
         href: 'https://ant.design',
         title: `ant design part ${i}`,
-        collect:30,
-        star:11,
-        com:11111,
+        collect: 30,
+        star: 11,
+        com: 11111,
         description:
             'Ant Design, a design language for background applications, is refined by Ant UED Team.',
         content:

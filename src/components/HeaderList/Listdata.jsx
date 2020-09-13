@@ -1,4 +1,4 @@
-import { List, Typography, Divider } from 'antd';
+import { List } from 'antd';
 import React from "react"
 import "./Listdata.css"
 const data = [

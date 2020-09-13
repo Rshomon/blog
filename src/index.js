@@ -2,8 +2,34 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from './serviceWorker';
+import axios from "axios"
+class Demo extends React.Component{
+  onclick = () => {
+    console.log("aaaaaaaaaaa")
+    axios.get("/api/v1")
+    .then(resp=>{
+      console.log(resp);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
+    ;
+    
+    
+  };
+  render(){
+    return(
+      <div>
+        <button onClick={this.onclick}>按钮</button>
+      </div>
+    )
+  }
+}
 ReactDOM.render(
-    <App />,
+  <div>
+    <Demo/>
+    <App />
+  </div>,
   document.getElementById("root")
 );
 
