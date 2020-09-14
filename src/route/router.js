@@ -1,5 +1,5 @@
 import Home from "../pages/Home/Home";
-import Test from "../Test/Test";
+import Detail from "../pages/Detail/Detail";
 // import About from "../pages/About/About";
 
 export const routes = [
@@ -8,7 +8,7 @@ export const routes = [
     component: Home,
   },
   {
-    path: "/test",
-    component: Test,
+    path: "/detail",
+    component: Detail,
   },
 ];
