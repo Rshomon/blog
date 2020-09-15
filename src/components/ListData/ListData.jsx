@@ -1,6 +1,7 @@
 import { List, Space } from 'antd';
 import React from "react"
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import {Link} from "react-router-dom"
 import "./ListData.less"
 import axios from "axios"
 
@@ -54,13 +55,15 @@ export default class Listdata extends React.Component {
                                 width={272}
                                 height={150}
                                 alt="logo"
-                                src="http://www.rashomon.top/img/img.jpg"
+                                src={"http://localhost:8000/uploads/"+item.img}
                             />
                         }
                     >
                         <List.Item.Meta
 
-                            title={<a href={item.href}>{item.title}</a>}
+                            // title={<a href={"/detail/:"+item.id}>{item.title}</a>}
+                            // 使用params传参的方式，因为需要添加锚点，导致url改变，所以需要固定参数在地址中
+                    title={<Link to={{pathname:'/detail/'+item.id}}>{item.title}</Link> }
                             description={item.abstract}
                         />
                         {item.content}
