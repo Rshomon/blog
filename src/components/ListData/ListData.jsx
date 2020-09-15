@@ -3,6 +3,7 @@ import React from "react"
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import {Link} from "react-router-dom"
 import "./ListData.less"
+import Spin from "../Spin/Spin"
 import axios from "axios"
 
 
@@ -17,13 +18,14 @@ export default class Listdata extends React.Component {
     constructor() {
         super()
         this.state = {
+            status:false,
             listData: []
         }
     }
     componentDidMount() {
         axios.get("/api/test1")
             .then(resp => {
-                this.setState({ listData: resp.data.data })
+                this.setState({ listData: resp.data.data,status:true })
             })
             .catch(err => {
                 console.log(err);
@@ -31,7 +33,10 @@ export default class Listdata extends React.Component {
     }
     render() {
         return (
-            <List
+            <div>
+                {
+                    this.state.status?
+                    <List
                 itemLayout="vertical"
                 size="large"
                 pagination={{
@@ -66,10 +71,12 @@ export default class Listdata extends React.Component {
                     title={<Link to={{pathname:'/detail/'+item.id}}>{item.title}</Link> }
                             description={item.abstract}
                         />
-                        {item.content}
+                        {/* {item.content} */}
                     </List.Item>
                 )}
-            />
+            />:<Spin/>
+                }
+            </div>
         )
     }
 }

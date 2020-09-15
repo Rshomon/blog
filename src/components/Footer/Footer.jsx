@@ -4,7 +4,7 @@ export default class Footer extends React.Component{
     render(){
         return (
             <div>
-                我是Footer
+                暂无数据
             </div>
         )
     }

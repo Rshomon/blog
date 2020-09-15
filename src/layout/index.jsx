@@ -15,7 +15,7 @@ export default class Index extends React.Component {
                             <Headers current="1"></Headers></Col>
                     </Row>
                 </Header>
-                <Content className="site-layout content" style={{ padding: '0 50px', marginTop: 64 }}>
+                <Content className="site-layout content" style={{ padding: '0 50px', marginTop: 64 ,paddingTop:'10px'}}>
                     <Row>
                         <Col span={16} offset={4}>
                         <div className="site-layout-background w" style={{ padding: 24, minHeight: 380 }}>
