@@ -1,6 +1,5 @@
 @import "../../assets/style/basestyle.css";
-
-
+@import "~csshake";
 #components-layout-demo-fixed .logo {
   width: 120px;
   height: 31px;
@@ -11,4 +10,39 @@
 .Navtitle {
   float: left;
   font-size: 30px;
+}
+
+div.at-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.at-item {
+  color: #3079ed;
+  animation-name: focus-in-contract;
+  animation-duration: 2.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  margin-right: 50px;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.btn{
+/* position: absolute; */
+width: 40px;
+font-size:30px;
+height: 40px;
 }

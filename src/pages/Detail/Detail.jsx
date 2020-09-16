@@ -6,6 +6,7 @@ import BlogDetail from "../../components/BlogDetail/BlogDetail"
 import CodeBlock from "../../utils/CodeBlock"
 import Spin from "../../components/Spin/Spin"
 import "./Detail.less"
+import BackTop from "../../components/BackTop/BackTop"
 // import Detail_Com from "../../components/Detail/Detail" 
 
 export default class Detail extends React.Component {
@@ -40,7 +41,7 @@ export default class Detail extends React.Component {
                             renderers={{
                                 code: CodeBlock
                             }} /></div> : <div className="loading"><Spin /></div>}
-
+                <BackTop />
             </Layout>
         )
     }

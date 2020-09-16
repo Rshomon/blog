@@ -1,10 +1,12 @@
+// 设置代码高亮
+
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 // 设置高亮样式
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism";
 // 设置高亮的语言
-import { jsx, javascript, sass, scss,python } from "react-syntax-highlighter/dist/esm/languages/prism";
+import { jsx, javascript, python } from "react-syntax-highlighter/dist/esm/languages/prism";
 class CodeBlock extends PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,

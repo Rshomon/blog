@@ -10,6 +10,7 @@ class BlogDetail extends React.Component {
             <div className="outer">
                 <Anchor className="AnchorPosition">
                     <MarkNav
+                        ordered={false}
                         className="article-menu"
                         source={this.props.articleDetail}
                         headingTopOffset={80}

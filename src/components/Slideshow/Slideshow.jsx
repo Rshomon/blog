@@ -44,7 +44,7 @@ export default class Slideshow extends React.Component {
                 {
                     this.state.status?this.state.data.map(item => {
                         return <div className="wrapper" key={item.id}>
-                            <Image src={"http://127.0.0.1:8000/uploads/" + item.img} alt={item.title} />
+                            <Image height={232} src={"http://127.0.0.1:8000/uploads/" + item.img} alt={item.title} />
                         </div>
 
                     }):<Spin/>

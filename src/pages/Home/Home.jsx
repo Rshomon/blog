@@ -6,6 +6,7 @@ import HeaderList from "../../components/HeaderList/Listdata"
 import Slideshow from "../../components/Slideshow/Slideshow"
 import ListData from "../../components/ListData/ListData"
 import Layout from "../../layout"
+import BackTop from "../../components/BackTop/BackTop"
 
 class Home extends React.Component {
     render() {
@@ -19,6 +20,7 @@ class Home extends React.Component {
                     </Row>
                     <ListData></ListData>
                 </Contents>
+                <BackTop />
             </Layout >
         )
     }

@@ -19,14 +19,22 @@ class Headers extends React.Component {
             })
         })
     }
+
     render() {
         return (
             <div className="header w">
                 <div className="logo" />
                 <Menu theme="light" mode="horizontal" defaultSelectedKeys={this.props.current}>
-                    <NavLink className="Navtitle" to='/home'>Blog</NavLink>
-                    <span>{this.state.content}</span>
+                    <NavLink className="Navtitle" to='/home'><div class='at-container'>
+                        <span class='at-item'>Blog
+                        </span>
+                    </div></NavLink>
+                    {/* <span>{this.state.content}</span> */}
+                    {/* 抖动！！！！！！ */}
+                    {/* <div className="shake-slow ">🙈🙉🙊🐵</div> */}
+                    {/* <span onClick={()=>{alert("点我干嘛？")}} className="shake-slow shake-constant btn"><a>🙈</a></span> */}
                 </Menu>
+
             </div>
         )
     }
