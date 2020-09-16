@@ -19,7 +19,7 @@ class App extends React.Component {
               return <Route exact key={index} path={item.path} component={item.component}></Route>
             })
           }
-          <Redirect from='/' to="/home"></Redirect>
+          <Redirect from='/' to="/"></Redirect>
         </Switch>
       </Router>
     )

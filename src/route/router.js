@@ -5,7 +5,7 @@ import Test from "../Test/Test";
 
 export const routes = [
   {
-    path: "/home",
+    path: "/",
     component: Home,
   },
   {

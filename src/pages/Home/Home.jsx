@@ -1,12 +1,12 @@
 import React from "react"
 import { Row, Col } from 'antd';
 import Contents from "../../components/Content/Content"
-import "./Home.css"
 import HeaderList from "../../components/HeaderList/Listdata"
 import Slideshow from "../../components/Slideshow/Slideshow"
 import ListData from "../../components/ListData/ListData"
 import Layout from "../../layout"
 import BackTop from "../../components/BackTop/BackTop"
+import "./Home.css"
 
 class Home extends React.Component {
     render() {

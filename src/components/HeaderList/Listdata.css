@@ -1,5 +1,19 @@
-.Listdata{
-    /* height: 233px; */
-    overflow: hidden;
-    margin-left: 20px;
+@import "../../assets//style/basestyle.css";
+.Listdata {
+  /* height: 233px; */
+  overflow: hidden;
+  margin-left: 20px;
+}
+div.header{
+    text-align: center;
+}
+a.list {
+  display: block;
+  width: 100%;
+  color: black;
+  text-align: center;
+  /* background-color: aquamarine; */
+}
+a.list:hover {
+  color: aqua;
 }

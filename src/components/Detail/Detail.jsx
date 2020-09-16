@@ -3,6 +3,8 @@ import MarkDown from "react-markdown"
 import axios from "axios"
 import BlogDetail from "../BlogDetail/BlogDetail"
 import CodeBlock from "../../utils/CodeBlock"
+import "./Detail.less"
+
 
 export default class Detail_page extends React.Component {
     constructor() {
@@ -25,7 +27,10 @@ export default class Detail_page extends React.Component {
     render() {
         return (
             <div>
+                <div className="blog">
                 <BlogDetail articleDetail={this.state.data} />
+                </div>
+                
                 <MarkDown source={this.state.data}
                     escapeHtml={false}
                     renderers={{

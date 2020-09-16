@@ -25,10 +25,19 @@ class Headers extends React.Component {
             <div className="header w">
                 <div className="logo" />
                 <Menu theme="light" mode="horizontal" defaultSelectedKeys={this.props.current}>
-                    <NavLink className="Navtitle" to='/home'><div class='at-container'>
+                    <NavLink className="Navtitle" to='/'>
+                        <div class='at-container'>
                         <span class='at-item'>Blog
                         </span>
-                    </div></NavLink>
+                    </div>
+                    </NavLink>
+                    <NavLink className="Navtitle" to='/'>
+                        <div class='at-container'>
+                        <span class='at-item'>Blog
+                        </span>
+                    </div>
+                    </NavLink>
+
                     {/* <span>{this.state.content}</span> */}
                     {/* 抖动！！！！！！ */}
                     {/* <div className="shake-slow ">🙈🙉🙊🐵</div> */}

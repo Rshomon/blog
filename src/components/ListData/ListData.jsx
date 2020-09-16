@@ -37,6 +37,8 @@ export default class Listdata extends React.Component {
                 {
                     this.state.status ?
                         <List
+                            // loading={this.state.status ? null : Spin}
+                            className="listdata"
                             itemLayout="vertical"
                             size="large"
                             pagination={{
@@ -44,31 +46,20 @@ export default class Listdata extends React.Component {
                                     console.log(page);
                                 },
                                 pageSize: 6,
+
                             }}
                             dataSource={this.state.listData}
                             renderItem={item => (
                                 <div className="hvr-grow-shadow content">
                                     <Link to={{ pathname: '/detail/' + item.id }}>
                                         <List.Item
+
                                             key={item.title}
                                             actions={[
                                                 <IconText icon={StarOutlined} text={item.click_nums} key="list-vertical-star-o" />,
                                                 // <IconText icon={LikeOutlined} text={item.collect} key="list-vertical-like-o" />,
                                                 // <IconText icon={MessageOutlined} text={item.com} key="list-vertical-message" />,
                                             ]}
-                                            extra={
-                                                <div class='at-container1'>
-                                                    <div class='at-item1' >
-                                                        <img
-                                                            className="flip-scale-2-ver-left shake-slow"
-                                                            width={272}
-                                                            height={150}
-                                                            alt="logo"
-                                                            src={"http://localhost:8000/uploads/" + item.img}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            }
                                         >
                                             <List.Item.Meta
 

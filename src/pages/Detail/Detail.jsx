@@ -35,7 +35,7 @@ export default class Detail extends React.Component {
             <Layout>
                 {this.state.status ?
                     <div>
-                        <BlogDetail articleDetail={this.state.data} />
+                        {/* <BlogDetail articleDetail={this.state.data} /> */}
                         <MarkDown source={this.state.data}
                             escapeHtml={false}
                             renderers={{
