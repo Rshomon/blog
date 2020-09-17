@@ -14,7 +14,7 @@ class Home extends React.Component {
             <Layout>
                 <Contents>
                     {/* 头部显示 */}
-                    <Row className="">
+                    <Row>
                         <Col span={10}><Slideshow></Slideshow></Col>
                         <Col span={14}><HeaderList /></Col>
                     </Row>
