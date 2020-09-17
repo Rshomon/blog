@@ -1,41 +1,45 @@
 @import "~hover.css/css/hover-min.css";
 div.at-container1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.listdata {
+  margin-top: 50px;
+}
+.at-item1 {
+  // width: 100px;
+  // height: 100px;
+  animation-name: slit-in-horizontal;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes slit-in-horizontal {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateX(90deg);
+    transform: translateZ(-800px) rotateX(90deg);
+    opacity: 0;
   }
-  .listdata{
-    margin-top: 50px;
+  50% {
+    -webkit-transform: translateZ(-160px) rotateX(87deg);
+    transform: translateZ(-160px) rotateX(87deg);
+    opacity: 1;
   }
-  .at-item1 {
-    // width: 100px;
-    // height: 100px;
-    animation-name: slit-in-horizontal;
-    animation-duration: 1.2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
+  100% {
+    -webkit-transform: translateZ(0) rotateX(0);
+    transform: translateZ(0) rotateX(0);
   }
-  @keyframes slit-in-horizontal {
-    0%{
-      -webkit-transform: translateZ(-800px) rotateX(90deg);
-      transform: translateZ(-800px) rotateX(90deg);
-      opacity: 0;
-    }
-    50%{
-      -webkit-transform: translateZ(-160px) rotateX(87deg);
-      transform: translateZ(-160px) rotateX(87deg);
-      opacity: 1;
-    }
-    100%{
-      -webkit-transform: translateZ(0) rotateX(0);
-      transform: translateZ(0) rotateX(0);
-    }
-  }
-  
-.content{
-    width: 100%;
+}
+
+.listcontent {
+  width: 100%;
+  // border: 1px #888 solid;
+  // margin: 40px 0;
+  background-color: white;
+  margin-bottom: 40px;
 }

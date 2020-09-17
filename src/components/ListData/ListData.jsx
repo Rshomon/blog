@@ -50,7 +50,7 @@ export default class Listdata extends React.Component {
                             }}
                             dataSource={this.state.listData}
                             renderItem={item => (
-                                <div className="hvr-grow-shadow content">
+                                <div className="hvr-grow-shadow listcontent">
                                     <Link to={{ pathname: '/detail/' + item.id }}>
                                         <List.Item
 

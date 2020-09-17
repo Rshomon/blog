@@ -1,7 +1,13 @@
 .site-layout .site-layout-background {
-  background: #fff;
+  background: transparent;
 }
 
 .content {
   /* background-color: skyblue; */
+}
+.wrapper-right {
+  background-color: aqua;
+  height: 100px;
+  margin-left: 40px;
+  box-shadow: 5px 5px 5px #888888;
 }

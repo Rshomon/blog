@@ -11,20 +11,22 @@ export default class Index extends React.Component {
         console.log(this.state)
         return (
             <Layout>
-                <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor: "white" }}>
+                <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor: "white", padding: '0' }}>
                     <Row>
-                        <Col span={16} offset={4}>
+                        <Col span={1} style={{ backgroundColor: "red" }}></Col>
+                        <Col span={22} style={{ backgroundColor: "black" }}>
                             <Headers current="1"></Headers></Col>
+                        <Col span={1} style={{ backgroundColor: "red" }}></Col>
                     </Row>
                 </Header>
-                <Content className="site-layout content" style={{ padding: '0 50px', marginTop: 64, paddingTop: '10px' }}>
-                    <Row>
-                        <Col span={16} offset={4}>
-                            <div className="site-layout-background w" style={{ padding: 24, minHeight: 380 }}>
-                                {this.props.children}
-                            </div>
-                        </Col>
-                    </Row>
+                <Content className="site-layout content" style={{ marginTop: 64, paddingTop: '10px' }}>
+                    {/* <Row> */}
+                    {/* <Col span={22} offset={1}> */}
+                    <div className="site-layout-background w" style={{ minHeight: 380, width: 1000 }}>
+                        {this.props.children}
+                    </div>
+                    {/* </Col> */}
+                    {/* </Row> */}
                 </Content>
                 <Footer style={{ textAlign: 'center' }}><Footers></Footers></Footer>
             </Layout >

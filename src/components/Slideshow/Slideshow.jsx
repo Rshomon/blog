@@ -36,22 +36,22 @@ export default class Slideshow extends React.Component {
 
     render() {
         return (
-
-            <Carousel autoplay style={CarouselStyle}>
-                {/* <div className="wrapper">
+            <div className="parent_wrapper">
+                <Carousel autoplay style={CarouselStyle}>
+                    {/* <div className="wrapper">
                     <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3543144268,4107014676&fm=26&gp=0.jpg" alt="logo" />
                 </div> */}
-                {
-                    this.state.status?this.state.data.map(item => {
-                        return <div className="wrapper" key={item.id}>
-                            <Image height={232} src={"http://127.0.0.1:8000/uploads/" + item.img} alt={item.title} />
-                        </div>
+                    {
+                        this.state.status ? this.state.data.map(item => {
+                            return <div className="wrapper" key={item.id}>
+                                <Image height={232} src={"http://127.0.0.1:8000/uploads/" + item.img} alt={item.title} />
+                            </div>
 
-                    }):<Spin/>
-                }
-            </Carousel>
+                        }) : <Spin />
+                    }
+                </Carousel>
 
-
+            </div>
         )
     }
 }

@@ -15,10 +15,26 @@ class Home extends React.Component {
                 <Contents>
                     {/* 头部显示 */}
                     <Row>
-                        <Col span={10}><Slideshow></Slideshow></Col>
-                        <Col span={14}><HeaderList /></Col>
+                        <Col span={16}>
+                            {/* <Row>
+                                <Col span={10}><Slideshow></Slideshow></Col>
+                                <Col span={14}><HeaderList /></Col>
+                            </Row> */}
+                            <ListData></ListData>
+                        </Col>
+                        <Col span={8}>
+                            <div className="wrapper-right">
+                                <Slideshow></Slideshow>
+                                <HeaderList />
+                            </div>
+                        </Col>
                     </Row>
-                    <ListData></ListData>
+                    {/* <Row>
+                        <Col span={16}>
+                            <ListData></ListData>
+                        </Col>
+                        <Col span={8}></Col>
+                    </Row> */}
                 </Contents>
                 <BackTop />
             </Layout >
