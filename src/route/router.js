@@ -1,3 +1,4 @@
+import Index from "../pages/Index/index";
 import Home from "../pages/Home/Home";
 import Detail from "../pages/Detail/Detail";
 import Test from "../Test/Test";
@@ -5,7 +6,7 @@ import Test from "../Test/Test";
 
 export const routes = [
   {
-    path: "/",
+    path: "/home",
     component: Home,
   },
   {
@@ -15,5 +16,9 @@ export const routes = [
   {
     path: "/test",
     component: Test,
+  },
+  {
+    path: "/",
+    component: Index,
   },
 ];

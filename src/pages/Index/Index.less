@@ -1,0 +1,54 @@
+// @import "~normalize.css";
+body {
+  background-color: #333333;
+  //   font-size: 50px;
+  color: white;
+}
+
+div.root {
+  //   background-color: aqua;
+  //   width: 100%;
+  width: 1300px;
+  margin: 0 auto;
+
+  .head {
+    // background-color: aqua;
+    padding-top: 50px;
+    line-height: 100px;
+    .left-head {
+        display: inline;
+      h3 {
+          color: white;
+        display: inline;
+      }
+    }
+    .right-head {
+      float: right;
+      .right-list {
+        display: flex;
+        li {
+          margin-left: 40px;
+          list-style: none;
+          // background-color: aliceblue;
+          &:hover {
+            border-bottom: 5px solid #656565;
+          }
+          &:first-child {
+            border-bottom: 5px solid white;
+          }
+          a {
+            display: block;
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    background-color: black;
+  }
+  .footer {
+    background-color: brown;
+  }
+}
