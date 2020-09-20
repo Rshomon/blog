@@ -1,3 +1,4 @@
+@import "~hover.css";
 div {
   .sidebar {
     height: 100%;
@@ -10,9 +11,6 @@ div {
       right: 0;
       font-size: 60px;
       display: block;
-      &:hover {
-        scale: 30;
-      }
     }
   }
   .mainbar {
@@ -35,20 +33,29 @@ div {
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: scroll;
-    .outer11 {
-      background-color: brown;
-    }
-    .inter {
-      overflow: hidden;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+    .main-content {
+      background-color: white;
     }
   }
 }
 
 .outer {
   overflow: hidden;
+}
+
+@media (max-width: 1530px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content-data {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 960px) {
+  .bg-wrapper {
+    display: none;
+  }
 }
