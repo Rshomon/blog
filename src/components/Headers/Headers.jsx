@@ -2,7 +2,7 @@ import React from "react"
 import { Menu } from 'antd';
 import "./Headers.css"
 import { NavLink } from "react-router-dom"
-const jinrishici = require('jinrishici')
+// const jinrishici = require('jinrishici')
 class Headers extends React.Component {
     constructor() {
         super()
@@ -12,12 +12,12 @@ class Headers extends React.Component {
     }
     componentDidMount() {
         // 使用今日诗词API获取
-        jinrishici.load(result => {
-            console.log(result)
-            this.setState({
-                content: result.data.content
-            })
-        })
+        // jinrishici.load(result => {
+        //     console.log(result)
+        //     this.setState({
+        //         content: result.data.content
+        //     })
+        // })
     }
 
     render() {

@@ -1,0 +1,54 @@
+div {
+  .sidebar {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    left: 0;
+    i {
+      position: absolute;
+      right: 0;
+      font-size: 60px;
+      display: block;
+      &:hover {
+        scale: 30;
+      }
+    }
+  }
+  .mainbar {
+    height: 100%;
+    width: 100%;
+    background-color: darkblue;
+    position: fixed;
+    right: 0;
+  }
+  .headbar {
+    background-color: aquamarine;
+    .head {
+      font-size: 32px;
+      background-color: azure;
+    }
+  }
+  .main {
+    background-color: skyblue;
+    height: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .outer11 {
+      background-color: brown;
+    }
+    .inter {
+      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+.outer {
+  overflow: hidden;
+}

@@ -20,10 +20,36 @@
       li {
         margin-left: 40px;
         list-style: none;
+        position: relative;
         font-weight: bold;
-        // background-color: aliceblue;
-        &:hover {
-          border-bottom: 5px solid #656565;
+        // li下划线
+        // span:hover {
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 5px;
+        //   background-color: red;
+        //   bottom: 0;
+        // }
+        span {
+          position: absolute;
+          width: 0;
+          height: 5px;
+          bottom: 0;
+          left: 50%;
+          transition: all 0.4s;
+        }
+        &:hover span {
+          left: 0;
+          width: 100%;
+          background-color: #656565;
+
+          // animation-name: scale-up-center;
+          // animation-duration: 0.3s;
+          // animation-timing-function: linear;
+          // animation-delay: 0s;
+          // animation-iteration-count: 1;
+          // animation-direction: normal;
+          // animation-fill-mode: none;
         }
         // &:first-child {
         //   border-bottom: 5px solid white;
@@ -50,7 +76,28 @@
   }
 }
 
-.active {
-  border-bottom: 5px solid white;
-  margin-left: 0;
+// 选中状态的下划线
+.active:after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.5s;
+  left: 0%;
+}
+.active:hover:after {
+  left: 50%;
+  width: 0;
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

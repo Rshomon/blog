@@ -8,12 +8,12 @@ class Index extends React.Component {
             <div className="root" style={{ fontSize: '16px', fontFamily: '"Helvetica Neue",Helvetica,Arial,sans-serif' }}>
                 <div className="wrapper-img">
                     <div id="head">
-                        <Head />
+                        <Head index_active={true} />
                         <div className="content">
                             <div className="content-head"><h1 className="at-item">Rm的个人博客</h1></div>
                             <div className="content-main">不爱摄影的程序员不会是好厨子</div>
                             <div className="content-footer">
-                                <a href="/home" type="button">进入</a>
+                                <a href="/home" type="button" className="hvr-shrink">进入</a>
                             </div>
                         </div>
                         <div className="footer">Cover template for <a href='#'>Bootstrap</a>, by <a href='#'>@Rm</a>.</div>
