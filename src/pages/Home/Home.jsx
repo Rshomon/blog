@@ -53,11 +53,12 @@ class Home extends React.Component {
             alert("你好")
         }
     }
-    // 
+    // 注册监听器
     componentDidMount() {
         window.addEventListener('resize', this.handleWidth);
         window.addEventListener('test', this.handletest);
     }
+    // 移除监听器
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWidth)
         window.removeEventListener('test', this.handletest);
@@ -95,7 +96,15 @@ class Home extends React.Component {
                                     <Col className="main-content-data" span="16">
                                         <ItemData sources={this.state.data} />
                                     </Col>
-                                    <Col className="TestDemo" span="8"></Col>
+                                    <Col className="TestDemo" span="8">
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                        <div>你好</div>
+                                    </Col>
                                 </Row>
                             </Col>
                             <Col span={this.state.main_span}></Col>
