@@ -88,17 +88,17 @@ class Home extends React.Component {
                             </Col>
                         </Row> */}
                         <Row className="main">
-                            <Col span={this.state.main_span}>
+                            <Col sm={0} xl={4} span={this.state.main_span}>
                             </Col>
-                            <Col className="main-content" span="16">
+                            <Col sm={24} xl={16} className="main-content">
                                 <Row>
-                                    <Col className="main-content-data" span="16">
+                                    <Col className="main-content-data" sm={24} md={16}>
                                         <ItemData sources={this.state.data} />
                                     </Col>
-                                    <Col className="TestDemo" span="8"></Col>
+                                    <Col className="TestDemo" sm={0} md={8}></Col>
                                 </Row>
                             </Col>
-                            <Col span={this.state.main_span}></Col>
+                            <Col sm={0} xl={4}></Col>
                         </Row>
                     </Col>
                 </Row>
