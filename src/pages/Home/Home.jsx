@@ -53,11 +53,12 @@ class Home extends React.Component {
             alert("你好")
         }
     }
-    // 
+    // 注册监听器
     componentDidMount() {
         window.addEventListener('resize', this.handleWidth);
         window.addEventListener('test', this.handletest);
     }
+    // 移除监听器
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleWidth)
         window.removeEventListener('test', this.handletest);
