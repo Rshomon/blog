@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.less";
+import style from "./Home.module.css";
 import { Row, Col } from "antd";
 import Head from "../../components/Head/Head"
 import ItemData from "../../components/ItemData/ItemData"
@@ -64,9 +64,6 @@ class Home extends React.Component {
         window.removeEventListener('test', this.handletest);
     }
     render() {
-        const style = {
-            transition: "all .8s",
-        }
         const arrowstyle = {
             transform: this.state.arrow,
             transition: "all .8s ",
@@ -79,21 +76,31 @@ class Home extends React.Component {
                     {/* <Head home_active={true} /> */}
                 </div>
                 <Row >
-                    <Col style={style} span={this.state.span} className="sidebar">
-                        <i style={arrowstyle} onClick={this.SwitchBtn} className="iconfont">&#xe62c;</i>
+                    {/* 侧边栏信息 */}
+                    <Col span={this.state.span} className={style.sidebar}>
+                        <div className={style.sidebar_info}>
+                            <div className={style.sidebar_info_head}>
+                                <div><i style={arrowstyle} onClick={this.SwitchBtn} className={style.iconfont}>&#xe62c;</i></div>
+                                <div><a href="/"><h1>Blog</h1></a></div>
+                            </div>
+                            <div className={style.sidebar_info_main}>
+                                <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2291332875,175289127&fm=26&gp=0.jpg" alt="awata" />
+                            </div>
+                            <div>footer</div>
+                        </div>
                     </Col>
-                    <Col style={style} span={24 - this.state.span} className="mainbar">
+                    <Col style={style} span={24 - this.state.span} className={style.mainbar}>
                         {/* <Row className="headbar">
                             <Col className="head" span="16" ofset="4">
                                 <Head home_active={true}/>
                             </Col>
                         </Row> */}
-                        <Row className="main">
+                        <Row className={style.main}>
                             <Col sm={0} xl={4} span={this.state.main_span}>
                             </Col>
-                            <Col sm={24} xl={16} className="main-content">
+                            <Col sm={24} xl={16} className={style.main_content}>
                                 <Row>
-                                    <Col className="main-content-data" sm={24} md={16}>
+                                    <Col className={style.main_content_data} sm={24} md={16}>
                                         <ItemData sources={this.state.data} />
                                     </Col>
                                     <Col className="TestDemo" sm={0} md={8}></Col>
