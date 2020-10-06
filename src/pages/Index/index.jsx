@@ -11,7 +11,7 @@ class Index extends React.Component {
                         <Head index_active={true} />
                         <div className="content">
                             <div className="content-head"><h1 className="at-item">Rm的个人博客</h1></div>
-                            <div className="content-main">不爱摄影的程序员不会是好厨子</div>
+                            {/* <div className="content-main">不爱摄影的程序员不会是好厨子</div> */}
                             <div className="content-footer">
                                 <a href="/home" type="button" className="hvr-shrink">进入</a>
                             </div>

@@ -4,6 +4,7 @@ import Detail from "../pages/Detail/Detail";
 import Test from "../Test/Test";
 import Head from "../components/Head/Head";
 import Item from "../components/ItemData/ItemData";
+import CollapseCom from "../components/Collapse/Collapse";
 // import About from "../pages/About/About";
 import ComponentTest from "../components/ComponentTest/ComponentTest";
 
@@ -35,5 +36,9 @@ export const routes = [
   {
     path: "/test1",
     component: ComponentTest,
+  },
+  {
+    path: "/Collapse",
+    component: CollapseCom,
   },
 ];
